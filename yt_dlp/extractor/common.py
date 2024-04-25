@@ -1118,7 +1118,7 @@ class InfoExtractor:
                 'headers': headers,
                 'query': query,
                 'expected_status': expected_status,
-                'impersonate': impersonate,
+                'impersonate': impersonate or self.get_param("impersonate"),
                 'require_impersonation': require_impersonation,
             }
             if parser is None:
